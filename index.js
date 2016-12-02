@@ -140,7 +140,7 @@ app.delete('/api/user/:userId/vehicle/:vehicleId', function(req, res, next){
 
 
 app.delete('/api/vehicle/:vehicleId', function(req, res, next){
-	db.remove_vehicle([req.params.vehicleId], function(err, result){
+	db.delete_vehicle([req.params.vehicleId], function(err, result){
 		if (err){
 			res.send(err);
 		} else {
