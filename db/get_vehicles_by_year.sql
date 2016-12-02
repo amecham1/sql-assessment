@@ -1,5 +1,4 @@
-SELECT year, firstname, lastname
-FROM Vehicles
-JOIN Users on Vehicles.ownerid = Users.id
-WHERE year > 2000
-ORDER BY year desc
+SELECT vehicles.year, users.firstname, users.lastname FROM vehicles
+JOIN users ON users.id = vehicles.ownerId
+WHERE vehicles.year > 2000
+ORDER BY vehicles.year DESC;
